@@ -41,6 +41,10 @@ header {
   font-family: "quicksand", sans-serif;
   gap: 30px;
 }
+.navbar-list a {
+  color: var(--secondary);
+  text-decoration: none;
+}
 
 .navbar h2 {
   font-weight: 500;
@@ -51,6 +55,7 @@ header {
   background-color: var(--background);
   color: var(--primary);
   padding: 5px 20px;
+  border-radius: 5px;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -60,11 +65,22 @@ header {
   background-color: var(--primary);
   color: var(--background);
   padding: 5px 20px;
+  border-radius: 5px;
   text-transform: uppercase;
   cursor: pointer;
 }
 
 /* hero */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  flex: 1;
+}
 #hero {
   display: flex;
   align-items: center;
@@ -90,6 +106,7 @@ header {
 
 .flex {
   display: flex;
+  border-radius: 5px;
 }
 
 .grid {
@@ -106,6 +123,7 @@ header {
   width: 90%;
   height: 20vh;
   color: var(--background);
+
 }
 
 .book .input {
@@ -176,7 +194,8 @@ input {
 .our-rooms-container {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 15px;
+  grid-gap: 20px;
+  gap: 20px;
   max-width: 100%;
   padding: 40px 15px;
   overflow-x: hidden;
@@ -205,11 +224,10 @@ input {
   margin-bottom: 10px;
   margin-top: 0;
 }
-/* Añade estas reglas CSS a tu archivo de estilos */
 
 .room-info-h2 h2 {
   text-align: start;
-  margin: 0; /* Asegura que no haya márgenes adicionales */
+  margin: 0;
 }
 .room-info-pricing p {
   color: var(--primary);
@@ -223,35 +241,35 @@ input {
   margin: 10px;
 }
 
-/* Ajustar el ancho al 100% del contenedor de la cuadrícula */
 .room-info,
 .room-info-pricing {
   width: 100%;
 }
-/* Añade estas reglas CSS a tu archivo de estilos */
 
 .room-info img.room-img {
   width: 100%;
-  height: auto; /* Esto mantiene la proporción de la imagen */
+  height: auto;
   border-radius: 10px;
 }
 
 .room-info-h2 {
-  text-align: center; /* Asegura que el título esté centrado */
+  text-align: center;
 }
 
 /* services */
-
+#services .main-title-area h2 {
+  margin-bottom: 60px;
+}
 .grid-container {
-  margin: 5px; /* Agrega un margen alrededor del contenedor */
-  padding: 5px; /* Agrega relleno al contenedor si es necesario */
+  margin: 5px;
+  padding: 5px;
 }
 
 .our-services {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-gap: 10px; /* Agrega un espacio de 10px entre las imágenes */
+  grid-gap: 10px;
   justify-content: center;
   align-items: center;
 }
@@ -260,10 +278,105 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Evita que las imágenes se desborden */
+  overflow: hidden;
 }
 
 .our-services .service img {
-  width: 100%; /* Ajusta el ancho de las imágenes al 100% del contenedor */
-  height: auto; /* Permite que la altura de las imágenes se ajuste automáticamente */
+  width: 100%;
+  height: auto;
+}
+
+/* about us*/
+#about-us,
+#rooms .main-title-area h2 {
+  margin-top: 60px;
+}
+.parrafo-primero {
+  text-align: center;
+}
+.card-container {
+  display: flex;
+  justify-content: space-between; 
+}
+
+.comment-card {
+  margin: 90px 60px 90px 60px;
+  background-color: var(--background);
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  margin-right: 15px;
+}
+.comment-card:last-child {
+  margin-right: 60px; /
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-details {
+  flex: 1;
+}
+
+.post-date {
+  font-style: italic;
+  color: var(--secondary)
+}
+
+.comment-text {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.like-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.like-btn {
+  background-color: var(--primary);
+  color: var(--background);
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.like-btn a{
+  color: var(--background);
+  text-decoration: none;
+}
+
+.like-count {
+  color: var(--secondary);
+}
+
+/*footer*/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+  color: var(--primary);
+  justify-content: center;
+  align-items: center;
+  margin: 0; /* Ajusta el margen según sea necesario */
+}
+
+footer p {
+color: var(--secondary);
 }
