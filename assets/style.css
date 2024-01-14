@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700;800&display=swap");
+
+:root {
+  --background: #ffff;
+  --primary: #b89d4c;
+  --secondary: #2d2d2f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "poppins", "quicksand", sans-serif;
+}
+
+/*header*/
+header {
+  background-color: var(--background);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+  padding: 0px 30px;
+  position: fixed;
+  z-index: 3;
+}
+/* navbar*/
+.logo {
+  height: 3rem;
+  width: 3rem;
+}
+.navbar,
+.navbar-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "quicksand", sans-serif;
+  gap: 30px;
+}
+
+.navbar h2 {
+  font-weight: 500;
+}
+
+.btn-log-in {
+  border: 1px solid var(--primary);
+  background-color: var(--background);
+  color: var(--primary);
+  padding: 5px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.btn-sign-up {
+  margin-left: 10px;
+  border: 1px solid var(--primary);
+  background-color: var(--primary);
+  color: var(--background);
+  padding: 5px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* hero */
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1080px;
+  height: fit-content;
+}
+.hero-info {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+.hero-info h1 {
+  position: absolute;
+  top: 50%;
+  left: 37%;
+  font-family: "poppins", sans-serif;
+  color: var(--background);
+  font-size: 60px;
+  letter-spacing: 0.5rem;
+  word-spacing: 2rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+
+.book {
+  position: absolute;
+  top: 90%;
+  left: 5%;
+  margin-top: 5%;
+  width: 90%;
+  height: 20vh;
+  color: var(--background);
+}
+
+.book .input {
+  background: var(--background);
+  padding: 20px 20px 40px 20px;
+}
+
+.book .search {
+  border: 1px solid var(--primary);
+  padding: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  outline: 1px solid var(--secondary);
+  background: var(--background);
+  margin-top: 20px;
+  color: var(--secondary);
+}
+
+::placeholder {
+  color: white;
+}
+
+.book .search {
+  width: 20%;
+}
+
+.book .btn-search {
+  border: 1px solid var(--primary);
+  background-color: var(--primary);
+  color: var(--background);
+  padding: 5px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.input label {
+  color: var(--secondary);
+  font-family: "poppins", sans-serif;
+  font-weight: 500;
+}
+
+/* rooms */
+
+#rooms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 15px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main-title-area {
+  text-align: center;
+  color: var(--primary);
+  font-family: "poppins", sans-serif;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.our-rooms-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  max-width: 100%;
+  padding: 40px 15px;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+.room-info {
+  background-color: var(--background);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 17px 0px rgba(138, 135, 135, 0.75);
+  -webkit-box-shadow: 0px 10px 17px 0px rgba(138, 135, 135, 0.75);
+  -moz-box-shadow: 0px 10px 17px 0px rgba(138, 135, 135, 0.75);
+}
+
+.room-info img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.room-info h2 {
+  font-family: "poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+/* Añade estas reglas CSS a tu archivo de estilos */
+
+.room-info-h2 h2 {
+  text-align: start;
+  margin: 0; /* Asegura que no haya márgenes adicionales */
+}
+.room-info-pricing p {
+  color: var(--primary);
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+.room-info-pricing {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+/* Ajustar el ancho al 100% del contenedor de la cuadrícula */
+.room-info,
+.room-info-pricing {
+  width: 100%;
+}
+/* Añade estas reglas CSS a tu archivo de estilos */
+
+.room-info img.room-img {
+  width: 100%;
+  height: auto; /* Esto mantiene la proporción de la imagen */
+  border-radius: 10px;
+}
+
+.room-info-h2 {
+  text-align: center; /* Asegura que el título esté centrado */
+}
+
+/* services */
+
+.grid-container {
+  margin: 5px; /* Agrega un margen alrededor del contenedor */
+  padding: 5px; /* Agrega relleno al contenedor si es necesario */
+}
+
+.our-services {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px; /* Agrega un espacio de 10px entre las imágenes */
+  justify-content: center;
+  align-items: center;
+}
+
+.our-services .service {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Evita que las imágenes se desborden */
+}
+
+.our-services .service img {
+  width: 100%; /* Ajusta el ancho de las imágenes al 100% del contenedor */
+  height: auto; /* Permite que la altura de las imágenes se ajuste automáticamente */
+}
