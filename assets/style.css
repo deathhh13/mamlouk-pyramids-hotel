@@ -95,13 +95,15 @@ main {
 }
 .hero-info h1 {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 37%;
   font-family: "poppins", sans-serif;
   color: var(--background);
-  font-size: 60px;
-  letter-spacing: 0.5rem;
-  word-spacing: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 50px;
+  letter-spacing: 0rem;
+  word-spacing: 1rem;
 }
 
 .flex {
